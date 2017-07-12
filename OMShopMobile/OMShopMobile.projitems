@@ -3,12 +3,194 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{263CC615-2F06-4042-AABC-AC879CDA4544}</SharedGUID>
+    <SharedGUID>{8F48D3C9-642E-4A3B-BA90-4AA417AB10A1}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>OMShopMobile</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\BreadCrumbs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\CategoriesDescription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Product.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ProductsDescription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\OnePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\ExpandList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\AdvancedFiltersList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\WebRequestUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\Pagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\ContentAndHeads.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\UserHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\ProductsSort.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\SortItemCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ParamSort.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductInCategoryTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ProductsAttributes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ProductOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ProductOptionValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Zone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Country.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\UserAddress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\APIException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Events\OperationEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Data\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Data\SqlConnect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Data\Session.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyDatePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\OrderTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Basket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\DeviceInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\ApplicationStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\GridBtnLayuot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\RedirectApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductNewTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\EntryExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\TextBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\PickerExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\DatePickerExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ListCellTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\InfoPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\Info\DeliveryInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\Info\AboutInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\Info\ConactsInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\Info\PaymentInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductsListTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Data\BasketDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\DeliveryTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\CustomControls\BindableRadioGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\CustomControls\CustomRadioButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Extensions\BindableObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Helper\EventArgs{T}.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Helper\EventExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\ViewModel\RadioGroupDemoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Pages\RadioGroupDemo.xaml.cs">
+      <DependentUpon>RadioGroupDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Pages\SamplesRadio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Delivery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Order.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\OrderCellTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\ShippingForCustomer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\OrderStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\GridUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Step.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\CellTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\OrderPosition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\TableSizeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\SizeArticle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MySearchBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\PagerIndicatorDots.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\PagerIndicatorTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\BasketView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\BottomView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\CatalogView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\TopView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\MainPageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\SearchView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\LoginView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\InfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ButtonCategoryTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\DeliveryView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\OrderResultView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\OrdersListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\ProductView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\CategoryListCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\BannerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\BannerTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\ProductNewViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\CarouselViewView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductGridTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Extensions\DoubleExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\ImageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\GestureLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\TextMeter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyScrollView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\SizeCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\RadioButtonItemCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\AdvancedSort.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\AppsLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Schedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\AppRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\AllInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Interface\IControlExtention.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Interface\INetworkConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Interface\IPickerExtention.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Interface\IKeyboardInteractions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\MyListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\User\AuthorizationView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\User\UserInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\User\ResetPasswordView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\User\PersonalDataView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\CatalogViewXaml.xaml.cs">
+      <DependentUpon>CatalogViewXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\CategoryListCellXaml.xaml.cs">
+      <DependentUpon>CategoryListCellXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\XLabs\Forms\Controls\FastGridCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\XLabs\Forms\Controls\GridView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\IScrollAwareElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\XLabs\GridEventArgs{T}.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductInCategoryTemplateXaml.xaml.cs">
+      <DependentUpon>ProductInCategoryTemplateXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\FastImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\FastCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\IFastCellCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\PageViewContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Controls\ViewEffectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Extensions\PointExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\Extensions\ViewExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Banner\Banner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Banner\BannerUrl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Banner\BannerImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Coupon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CustomFrame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Events\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\Info\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\CustomControls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Helper\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\ViewModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Components\CarouselLayoutView\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Interface\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\User\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\XLabs\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\TwinTechs\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OMShopMobile\Classes\Data\Banner\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\CheckBox\Pages\RadioGroupDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\Views\MainViews\CatalogViewXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\CategoryListCellXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)OMShopMobile\Pages\ItemTemplates\ProductInCategoryTemplateXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

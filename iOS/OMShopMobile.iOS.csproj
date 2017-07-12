@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{9E2F2175-4AFB-4B35-8D26-B2B8751BC1BB}</ProjectGuid>
+    <ProjectGuid>{8F46029E-7EB5-4884-A58C-E3243D3374F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>OMShopMobile.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -22,10 +22,13 @@
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>full</DebugType>
+    <DebugType></DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -33,7 +36,8 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision></CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -44,6 +48,9 @@
     <MtouchArch>i386</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
+    <CodesignProvision></CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignExtraArgs></CodesignExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,45 +62,208 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignEntitlements></CodesignEntitlements>
+    <MtouchProfiling>false</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision></CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="SDWebImage">
+      <HintPath>..\packages\Xamarin.SDWebImage.3.7.5\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Touch">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Forms.Touch.dll</HintPath>
     </Reference>
     <Reference Include="Calabash">
-      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.13.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.6\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="NewRelic.Api.Agent">
+      <HintPath>..\packages\NewRelic.Agent.Api.6.13.366.0\lib\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait%402x.png" />
-    <BundleResource Include="Resources\Icon-60%402x.png" />
-    <BundleResource Include="Resources\Icon-60%403x.png" />
-    <BundleResource Include="Resources\Icon-76.png" />
-    <BundleResource Include="Resources\Icon-76%402x.png" />
-    <BundleResource Include="Resources\Icon-Small.png" />
-    <BundleResource Include="Resources\Icon-Small%402x.png" />
-    <BundleResource Include="Resources\Icon-Small%403x.png" />
-    <BundleResource Include="Resources\Icon-Small-40.png" />
-    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Logo_OM_0_50x50.png" />
+    <BundleResource Include="Resources\Header\arrow_top_%402x.png" />
+    <BundleResource Include="Resources\Header\cart_top_%402x.png" />
+    <BundleResource Include="Resources\Header\filter_top_%402x.png" />
+    <BundleResource Include="Resources\Header\logo_top_%402x.png" />
+    <BundleResource Include="Resources\Header\podelitsya_top_%402x.png" />
+    <BundleResource Include="Resources\Header\arrow_top_%403x.png" />
+    <BundleResource Include="Resources\Header\cart_top_%403x.png" />
+    <BundleResource Include="Resources\Header\filter_top_%403x.png" />
+    <BundleResource Include="Resources\Header\logo_top_%403x.png" />
+    <BundleResource Include="Resources\Header\podelitsya_top_%403x.png" />
+    <BundleResource Include="Resources\Fonts\MyriadProBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\MyriadProBoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\MyriadProItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\MyriadProRegular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\MyriadProSemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\MyriadProSemiBoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Catalog\bag_main_%402x.png" />
+    <BundleResource Include="Resources\Catalog\catalog_main_%402x.png" />
+    <BundleResource Include="Resources\Catalog\men_main_%402x.png" />
+    <BundleResource Include="Resources\Catalog\bag_main_%403x.png" />
+    <BundleResource Include="Resources\Catalog\catalog_main_%403x.png" />
+    <BundleResource Include="Resources\Catalog\men_main_%403x.png" />
+    <BundleResource Include="Resources\Catalog\dot_green_%402x.png" />
+    <BundleResource Include="Resources\Catalog\dot_green_%403x.png" />
+    <BundleResource Include="Resources\Catalog\dot_grey_%402x.png" />
+    <BundleResource Include="Resources\Catalog\dot_grey_%403x.png" />
+    <BundleResource Include="Resources\Catalog\arrow_catalog_%402x.png" />
+    <BundleResource Include="Resources\Catalog\arrow_catalog_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_filter_grey_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_filter_grey_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_razmer_white_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_razmer_white_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_vibor_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Galochka_vibor_%403x.png" />
+    <BundleResource Include="Resources\Header\arrow_green_%402x.png" />
+    <BundleResource Include="Resources\Header\arrow_green_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Rasprodano_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Rasprodano_%403x.png" />
+    <BundleResource Include="Resources\Header\loup_poisk%402x.png" />
+    <BundleResource Include="Resources\Basket\green_dot_delete_%402x.png" />
+    <BundleResource Include="Resources\Basket\green_dot_delete_%403x.png" />
+    <BundleResource Include="Resources\Basket\grey_kvadrat_%403x.png" />
+    <BundleResource Include="Resources\Basket\grey_kvadrat_galochka_%402x.png" />
+    <BundleResource Include="Resources\Basket\grey_kvadrat_galochka_%403x.png" />
+    <BundleResource Include="Resources\Basket\grey_kvadrat_%402x.png" />
+    <BundleResource Include="Resources\Login\avatar_%402x.png" />
+    <BundleResource Include="Resources\Login\clock_lk_%402x.png" />
+    <BundleResource Include="Resources\Login\dostavka_lk_%402x.png" />
+    <BundleResource Include="Resources\Login\pay_lk_%402x.png" />
+    <BundleResource Include="Resources\Login\sborka_lk_%402x.png" />
+    <BundleResource Include="Resources\Login\avatar_%403x.png" />
+    <BundleResource Include="Resources\Login\clock_lk_%403x.png" />
+    <BundleResource Include="Resources\Login\dostavka_lk_%403x.png" />
+    <BundleResource Include="Resources\Login\pay_lk_%403x.png" />
+    <BundleResource Include="Resources\Login\sborka_lk_%403x.png" />
+    <BundleResource Include="Resources\Footer\cabinet_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\infot_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\loupet_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\menut_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\cabinett_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\infot_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\loupet_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\menut_podval_%403x.png" />
+    <BundleResource Include="Resources\Zaglushka_%402x.png" />
+    <BundleResource Include="Resources\Zaglushka_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Sizesfon_left_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Sizesfon_left_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Sizesfon_right_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Sizesfon_right_%403x.png" />
+    <BundleResource Include="Resources\default.css" />
+    <BundleResource Include="Resources\Banner\banner_belie%402x.jpg" />
+    <BundleResource Include="Resources\Banner\banner_polo%402x.jpg" />
+    <BundleResource Include="Resources\Banner\banner_zoo%402x.jpg" />
+    <BundleResource Include="Resources\Banner\banner_belie%403x.jpg" />
+    <BundleResource Include="Resources\Banner\banner_polo%403x.jpg" />
+    <BundleResource Include="Resources\Banner\banner_zoo%403x.jpg" />
+    <BundleResource Include="Resources\Info\skype%402x.png" />
+    <BundleResource Include="Resources\Info\phone%403x.png" />
+    <BundleResource Include="Resources\Info\skype%403x.png" />
+    <BundleResource Include="Resources\Info\phone%402x.png" />
+    <BundleResource Include="Resources\Catalog\green_delete_%402x.png" />
+    <BundleResource Include="Resources\Catalog\loup_poisk_%402x.png" />
+    <BundleResource Include="Resources\Catalog\green_delete_%403x.png" />
+    <BundleResource Include="Resources\Catalog\loup_poisk_%403x.png" />
+    <BundleResource Include="Resources\1536_2008.png" />
+    <BundleResource Include="Resources\Catalog\dress_main_%402x.png" />
+    <BundleResource Include="Resources\Catalog\dress_main_%403x.png" />
+    <BundleResource Include="Resources\Catalog\skidka_%402x.png" />
+    <BundleResource Include="Resources\Catalog\skidka_%403x.png" />
+    <BundleResource Include="Resources\Catalog\new_%402x.png" />
+    <BundleResource Include="Resources\Catalog\new_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Clock_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Clock_%403x.png" />
+    <BundleResource Include="Resources\Catalog\Sklad_%402x.png" />
+    <BundleResource Include="Resources\Catalog\Sklad_%403x.png" />
+    <BundleResource Include="Resources\Basket\dot_green_delete_%402x.png" />
+    <BundleResource Include="Resources\Basket\dot_green_delete_%403x.png" />
+    <BundleResource Include="Resources\Basket\dot_green_delete_%402x~ipad.png" />
+    <BundleResource Include="Resources\Banner\08072016_1%402x.png" />
+    <BundleResource Include="Resources\Banner\08072016_2%402x.png" />
+    <BundleResource Include="Resources\Banner\08072016_3%402x.png" />
+    <BundleResource Include="Resources\Banner\08072016_4%402x.png" />
+    <BundleResource Include="Resources\Banner\08072016_5%402x.png" />
+    <BundleResource Include="Resources\Banner\08072016_1%403x.png" />
+    <BundleResource Include="Resources\Banner\08072016_2%403x.png" />
+    <BundleResource Include="Resources\Banner\08072016_3%403x.png" />
+    <BundleResource Include="Resources\Banner\08072016_4%403x.png" />
+    <BundleResource Include="Resources\Banner\08072016_5%403x.png" />
+    <BundleResource Include="Resources\Footer\cabinet_podval_%401x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_%401x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_fon_%401x.png" />
+    <BundleResource Include="Resources\Footer\info_podval_%401x.png" />
+    <BundleResource Include="Resources\Footer\loupet_podval_%401x.png" />
+    <BundleResource Include="Resources\Footer\otloz_podval_%401x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_fon_%402x.png" />
+    <BundleResource Include="Resources\Footer\info_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\otloz_podval_%402x.png" />
+    <BundleResource Include="Resources\Footer\cabinet_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\cart_podval_fon_%403x.png" />
+    <BundleResource Include="Resources\Footer\info_podval_%403x.png" />
+    <BundleResource Include="Resources\Footer\otloz_podval_%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_1%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_2%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_3%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_4%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_5%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_6%402x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_1%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_2%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_3%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_4%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_5%403x.png" />
+    <BundleResource Include="Resources\Banner\OM_01082016_6%406x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -106,12 +276,73 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ITunesArtwork Include="ITunesArtwork" />
-    <ITunesArtwork Include="ITunesArtwork%402x" />
+    <Compile Include="IosUtilits.cs" />
+    <Compile Include="CheckBox\Extensions\StringExtensions.cs" />
+    <Compile Include="CheckBox\Renderer\RadioButtonRenderer.cs" />
+    <Compile Include="CheckBox\Renderer\RadioButtonView.cs" />
+    <Compile Include="Renderers\MyButtonRenderer.cs" />
+    <Compile Include="Renderers\MyDatePickerRenderer.cs" />
+    <Compile Include="Renderers\MyEntryRenderer.cs" />
+    <Compile Include="Renderers\MyLabelRenderer.cs" />
+    <Compile Include="Renderers\MyPickerRenderer.cs" />
+    <Compile Include="NetworkConnection.cs" />
+    <Compile Include="Renderers\MySearchBarRenderer.cs" />
+    <Compile Include="Renderers\CarouselLayoutRenderer.cs" />
+    <Compile Include="Renderers\ViewCellRenderer.cs" />
+    <Compile Include="Renderers\MyEditorRenderer.cs" />
+    <Compile Include="Renderers\ScrollViewRenderer.cs" />
+    <Compile Include="Renderers\MyListViewRenderer.cs" />
+    <Compile Include="XLabs\Forms\Controls\GridView\GridCollectionView.cs" />
+    <Compile Include="XLabs\Forms\Controls\GridView\GridDataSource.cs" />
+    <Compile Include="XLabs\Forms\Controls\GridView\GridViewCell.cs" />
+    <Compile Include="XLabs\Forms\Controls\GridView\GridViewDelegate.cs" />
+    <Compile Include="XLabs\Forms\Controls\GridView\GridViewRenderer.cs" />
+    <Compile Include="TwinTechs\Ios\Extensions\UIViewControllerExtensions.cs" />
+    <Compile Include="TwinTechs\Ios\Extensions\ViewExtensions.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\FastCellCache.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\FastCellRenderer.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\FastImageRenderer.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\PageViewContainerRenderer.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\ViewControllerContainer.cs" />
+    <Compile Include="TwinTechs\Ios\Controls\ViewMaskExtensionProvider.cs" />
+    <Compile Include="FormsViewToNativeiOS.cs" />
   </ItemGroup>
   <Import Project="..\OMShopMobile\OMShopMobile.projitems" Label="Shared" Condition="Exists('..\OMShopMobile\OMShopMobile.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Folder Include="Resources\Footer\" />
+    <Folder Include="Resources\Header\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Catalog\" />
+    <Folder Include="Resources\Basket\" />
+    <Folder Include="Resources\Login\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\Banner\" />
+    <Folder Include="Resources\Info\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Media.xcassets\Contents.json" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Media.xcassets\AppIcons.appiconset\Icon-167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="sdwebimage">
+      <Version>3.7.5</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
 </Project>

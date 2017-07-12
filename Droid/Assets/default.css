@@ -1,0 +1,15 @@
+﻿@font-face{ font-family: MyriadProRegular; src: url("MyriadProRegular.ttf")}
+body,p {
+	color: #333333;
+	font-size: 14px;
+  	font-family: MyriadProRegular;
+  	text-align: justify;
+}
+h3 {
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #009F9C;
+}
+.green {
+	color: #009F9C;
+}

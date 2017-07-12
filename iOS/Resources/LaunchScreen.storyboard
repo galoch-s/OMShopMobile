@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,24 +9,12 @@
             <objects>
                 <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
-                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                        <viewControllerLayoutGuide type="top" id="51"/>
+                        <viewControllerLayoutGuide type="bottom" id="52"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="1536_2008.png" id="47">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
-                        </constraints>
-                    </view>
+                    </imageView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +22,72 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="1536_2008.png" width="1536" height="2008"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="arrow_down.png" width="32" height="32"/>
+        <image name="arrow_left.png" width="32" height="32"/>
+        <image name="cart.png" width="40" height="40"/>
+        <image name="cart_active.png" width="40" height="40"/>
+        <image name="catalog.png" width="32" height="32"/>
+        <image name="catalog_active.png" width="32" height="32"/>
+        <image name="lock.png" width="32" height="32"/>
+        <image name="lock_active.png" width="32" height="32"/>
+        <image name="stock.png" width="24" height="24"/>
+        <image name="stock_active.png" width="24" height="24"/>
+        <image name="Logo_OM_0_50x50.png" width="50" height="50"/>
+        <image name="btn_delete.png" width="16" height="16"/>
+        <image name="btn_edit.png" width="16" height="16"/>
+        <image name="cart_active_fill.png" width="40" height="40"/>
+        <image name="cart_fill.png" width="40" height="40"/>
+        <image name="search.png" width="30" height="30"/>
+        <image name="search_active.png" width="30" height="30"/>
+        <image name="Header/arrow_top_.png" width="11" height="20.333334"/>
+        <image name="Header/cart_top_.png" width="20.333334" height="20.333334"/>
+        <image name="Header/filter_top_.png" width="18.333334" height="20.333334"/>
+        <image name="Header/logo_top_.png" width="54.6666679" height="30.333334"/>
+        <image name="Header/podelitsya_top_.png" width="16" height="20.333334"/>
+        <image name="prodNew.png" width="120" height="180"/>
+        <image name="men.jpg" width="35" height="25"/>
+        <image name="women.jpg" width="35" height="25"/>
+        <image name="allcat.jpg" width="35" height="25"/>
+        <image name="accecuars.jpg" width="35" height="25"/>
+        <image name="Catalog/bag_main_.png" width="20" height="20"/>
+        <image name="Catalog/catalog_main_.png" width="20" height="20"/>
+        <image name="Catalog/dress_main_.png" width="20" height="20"/>
+        <image name="Catalog/men_main_.png" width="20" height="20"/>
+        <image name="Catalog/dot_green_.png" width="7.33333349" height="7.33333349"/>
+        <image name="Catalog/dot_grey_.png" width="7.33333349" height="7.33333349"/>
+        <image name="Catalog/arrow_catalog_.png" width="8" height="15"/>
+        <image name="Catalog/Galochka_filter_grey_.png" width="15" height="8.666667"/>
+        <image name="Catalog/Galochka_razmer_white_.png" width="15" height="8.666667"/>
+        <image name="Catalog/Galochka_vibor_.png" width="15" height="11"/>
+        <image name="Header/arrow_green_.png" width="11.666667" height="20.666666"/>
+        <image name="Catalog/Rasprodano_.png" width="150" height="198"/>
+        <image name="Header/loup_poisk.png" width="11" height="11"/>
+        <image name="Basket/green_dot_delete_.png" width="20" height="20"/>
+        <image name="Basket/grey_kvadrat_.png" width="20.5" height="20.5"/>
+        <image name="Basket/grey_kvadrat_galochka_.png" width="20.666666" height="20.666666"/>
+        <image name="Login/avatar_.png" width="60" height="60"/>
+        <image name="Login/clock_lk_.png" width="40" height="40"/>
+        <image name="Login/dostavka_lk_.png" width="40" height="40"/>
+        <image name="Login/pay_lk_.png" width="40" height="40"/>
+        <image name="Login/sborka_lk_.png" width="40" height="40"/>
+        <image name="Footer/cabinet_podval_.png" width="24" height="24"/>
+        <image name="Footer/infot_podval_.png" width="24" height="24"/>
+        <image name="Footer/loupet_podval_.png" width="24" height="24"/>
+        <image name="Footer/menut_podval_.png" width="24" height="24"/>
+        <image name="Footer/cabinett_podval_.png" width="24" height="24"/>
+        <image name="Zaglushka_.png" width="133" height="166"/>
+        <image name="Catalog/Sizesfon_left_.png" width="20" height="40"/>
+        <image name="Catalog/Sizesfon_right_.png" width="20" height="40"/>
+        <image name="Banner/banner_belie.jpg" width="384" height="148"/>
+        <image name="Banner/banner_polo.jpg" width="384" height="148"/>
+        <image name="Banner/banner_zoo.jpg" width="384" height="148"/>
+        <image name="Info/skype_.png" width="27" height="27"/>
+        <image name="Info/phone_.png" width="27" height="27"/>
+        <image name="Catalog/green_delete_.png" width="14" height="14"/>
+        <image name="Catalog/loup_poisk_.png" width="14" height="14"/>
+        <image name="Catalog/clock_.png" width="20.666666" height="20.666666"/>
     </resources>
 </document>

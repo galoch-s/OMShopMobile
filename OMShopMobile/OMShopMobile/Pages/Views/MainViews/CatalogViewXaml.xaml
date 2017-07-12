@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="OMShopMobile.CatalogViewXaml"
+		xmlns:Control="clr-namespace:OMShopMobile"
+		xmlns:xlabs="clr-namespace:XLabs.Forms.Controls"
+		VerticalOptions="FillAndExpand"
+		>
+	<ContentView.Content>
+		<StackLayout VerticalOptions="FillAndExpand">
+			<ListView x:Name="listViewCategory" VerticalOptions="FillAndExpand" >
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<Control:CategoryListCellXaml />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+				<ListView.Footer>
+					<StackLayout>
+
+						<xlabs:GridView 
+							x:Name="gridProduct"
+							RowSpacing="5"
+							ColumnSpacing="5"
+							ContentPaddingBottom="0"
+							ContentPaddingTop="6"
+							ContentPaddingLeft="0"
+							ContentPaddingRight="0"
+							ItemWidth="167"
+							ItemHeight="208"
+							ItemSelected="OnItemSelected"
+							IsScrollEnabled="false"
+							SelectionEnabled="true"
+							HeightRequest="300"
+							VerticalOptions="FillAndExpand">
+							<xlabs:GridView.ItemTemplate>
+								<DataTemplate>
+									<Control:ProductInCategoryTemplateXaml />
+								</DataTemplate>
+							</xlabs:GridView.ItemTemplate>
+						</xlabs:GridView>
+						
+					</StackLayout>
+				</ListView.Footer>
+			</ListView>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>

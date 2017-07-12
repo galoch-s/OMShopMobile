@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{275BCE73-51DF-4CF6-A65D-AFC1CBE8928A}</ProjectGuid>
+    <ProjectGuid>{F275951E-9163-492B-9085-67EEBB2D8D45}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>OMShopMobile.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -12,10 +12,11 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <AssemblyName>OMShopMobile.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidTlsProvider></AndroidTlsProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,41 +28,118 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
+    <DebugType></DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="System.Json" />
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Droid">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
     <Reference Include="FormsViewGroup">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.3.3.6323\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="NewRelic.Api.Agent">
+      <HintPath>..\packages\NewRelic.Agent.Api.6.13.366.0\lib\NewRelic.Api.Agent.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NetworkConnection.cs" />
+    <Compile Include="AndroidUtilits.cs" />
+    <Compile Include="CheckBox\Renderer\RadioButtonRenderer.cs" />
+    <Compile Include="Renderers\CarouselLayoutRenderer.cs" />
+    <Compile Include="Renderers\CustomNavigationRenderer.cs" />
+    <Compile Include="Renderers\MyButtonRenderer.cs" />
+    <Compile Include="Renderers\MyDatePickerRenderer.cs" />
+    <Compile Include="Renderers\MyEntryRenderer.cs" />
+    <Compile Include="Renderers\MyLabelRenderer.cs" />
+    <Compile Include="Renderers\MyPickerRenderer.cs" />
+    <Compile Include="Renderers\ScrollViewRenderer.cs" />
+    <Compile Include="Renderers\MySearchBarRenderer.cs" />
+    <Compile Include="SplashActivity.cs" />
+    <Compile Include="Renderers\MyEditorRenderer.cs" />
+    <Compile Include="Renderers\MyListViewRenderer.cs" />
+    <Compile Include="XLabs\Controls\GridView\GridViewAdapter.cs" />
+    <Compile Include="XLabs\Controls\GridView\GridViewCellContainer.cs" />
+    <Compile Include="XLabs\Controls\GridView\GridViewRenderer.cs" />
+    <Compile Include="TwinTechs\Droid\Extensions\ViewExtensions.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\FastCellCache.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\FastCellRenderer.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\FastGridCellCache.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\FastImageRenderer.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\ImageLoaderCache.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\PageViewContainerRenderer.cs" />
+    <Compile Include="TwinTechs\Droid\Controls\ViewMaskExtensionProvider.cs" />
+    <Compile Include="MonoDroidToolkit\ImageLoader\FileCache.cs" />
+    <Compile Include="MonoDroidToolkit\ImageLoader\ImageLoader.cs" />
+    <Compile Include="MonoDroidToolkit\ImageLoader\MemoryCache.cs" />
+    <Compile Include="FormsToNativeDroid.cs" />
+    <Compile Include="Renderers\CustomFrameRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -72,14 +150,497 @@
   <ItemGroup>
     <Folder Include="Resources\layout\" />
     <Folder Include="Resources\values\" />
+    <Folder Include="CheckBox\" />
+    <Folder Include="CheckBox\Renderer\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-ldpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-xlarge\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Logo_OM.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Logo_OM.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Logo_OM.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Logo_OM.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Logo_OM.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Zaglushka_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\arrow_down_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\arrow_down_white_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\arrow_right_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\cancel_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\clock_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\green_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\green_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\green_galochka_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\grey_checkbox_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\grey_dot_main_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Logo_OM_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\loupe_poisk_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\money_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\new_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\podelitsya_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Rasprodano_.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner_belie.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner_polo.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner_zoo.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\skype.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\skype.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\skype.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\skype.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\skype.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\phone.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\skype.png" />
+    <AndroidResource Include="Resources\values\style.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-ldpi\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cancelfoto.png" />
+    <AndroidResource Include="Resources\drawable\back_for_search.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable\searchcolor.xml" />
+    <AndroidResource Include="Resources\drawable\ViewCellBackground.xml" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\grd.xml" />
+    <AndroidResource Include="Resources\drawable\textfield_search_default_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\textfield_search_selected_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\podval_loupe_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\podval_info_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\podval_kabinet_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\podval_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\Logo_OM_gor.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\arrow_back_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\arrow_back_green_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\basket_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\filter_topmenu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\bag_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\dress_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\menu_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\pidjak_menu_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\Sizesfon_left_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\Sizesfon_right_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\dot_green_delete_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\Kabinet_avatar_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\clock_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\money_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\sborka_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\dostavka_.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\splash_om.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\clock.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-xlarge\Sklad.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\banner6.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner4.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner5.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\banner6.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner4.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner5.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\banner6.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\money.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\money.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\money.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\money.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\money.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clock_lk.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dostavka.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Dostavlen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Kabinet_avatar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\money.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\oplachen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sborka.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\B08072016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\B08072016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\B08072016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\B08072016_4.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\B08072016_5.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_01082016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_01082016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_01082016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_01082016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_01082016_6.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_4.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_5.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\OM_07092016_6.png" />
+    <AndroidResource Include="Resources\drawable\btn1.xml" />
   </ItemGroup>
   <Import Project="..\OMShopMobile\OMShopMobile.projitems" Label="Shared" Condition="Exists('..\OMShopMobile\OMShopMobile.projitems')" />
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\MyriadProBold.ttf" />
+    <AndroidAsset Include="Assets\MyriadProBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\MyriadProItalic.ttf" />
+    <AndroidAsset Include="Assets\MyriadProRegular.ttf" />
+    <AndroidAsset Include="Assets\MyriadProSemiBold.ttf" />
+    <AndroidAsset Include="Assets\MyriadProSemiBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\default.css" />
+    <AndroidAsset Include="Assets\phone.png" />
+    <AndroidAsset Include="Assets\skype.png" />
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
 </Project>

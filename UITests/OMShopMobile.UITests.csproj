@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2909CA8F-9430-4F1A-A651-C3E155EA3A97}</ProjectGuid>
+    <ProjectGuid>{A640643C-5F03-4A10-9861-79A6ACD8E7D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>OMShopMobile.UITests</RootNamespace>
     <AssemblyName>OMShopMobile.UITests</AssemblyName>
@@ -30,22 +30,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.3.6.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.0.7.1\lib\Xamarin.UITest.dll</HintPath>
+      <HintPath>..\packages\Xamarin.UITest.2.0.5\lib\Xamarin.UITest.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iOS\OMShopMobile.iOS.csproj">
-      <Project>{9E2F2175-4AFB-4B35-8D26-B2B8751BC1BB}</Project>
-      <Name>OMShopMobile.iOS</Name>
+    <ProjectReference Include="..\Droid\OMShopMobile.Droid.csproj">
+      <Project>{F275951E-9163-492B-9085-67EEBB2D8D45}</Project>
+      <Name>OMShopMobile.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\OMShopMobile.Droid.csproj">
-      <Project>{275BCE73-51DF-4CF6-A65D-AFC1CBE8928A}</Project>
-      <Name>OMShopMobile.Droid</Name>
+    <ProjectReference Include="..\iOS\OMShopMobile.iOS.csproj">
+      <Project>{8F46029E-7EB5-4884-A58C-E3243D3374F3}</Project>
+      <Name>OMShopMobile.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
@@ -54,8 +54,8 @@
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xlabs:FastGridCell 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="OMShopMobile.ProductInCategoryTemplateXaml"
+		xmlns:xlabs="clr-namespace:XLabs.Forms.Controls"
+		xmlns:controls="clr-namespace:TwinTechs.Controls">
+
+	<StackLayout VerticalOptions="FillAndExpand">
+		<controls:FastImage
+			x:Name="ImageView"
+			WidthRequest="150"
+			HeightRequest="150" />
+		
+		<Label Text="{Binding productsDescription.Name}" />
+		<Label Text="FHFH" TextColor="Black" />
+	</StackLayout>
+</xlabs:FastGridCell>
